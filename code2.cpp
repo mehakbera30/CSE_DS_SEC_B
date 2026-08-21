@@ -29,14 +29,18 @@ int main(){
     // cout<<setprecision(4)<<ans<<endl;
 
 
-    int a,b,c;
-    cin>>a>>b>>c;
-    int avg = (a+b)/2;
-    if(avg > c){
-        cout<<"yes"<<endl;
-    }
-    else cout<<"no"<<endl;
+    // int a,b,c;
+    // cin>>a>>b>>c;
+    // int avg = (a+b)/2;
+    // if(avg > c){
+    //     cout<<"yes"<<endl;
+    // }
+    // else cout<<"no"<<endl;
 
-    return 0;
+    // return 0;
+
+
+    int n = 10203004;
+    cout<<10203004 % 10 <<endl;
     
 }

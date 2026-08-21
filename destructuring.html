@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const student = {
+            name : "deepak",
+            class : "3rd year",
+            fee : 50000
+        }
+        document.write(student.name);
+        document.write(student.class);
+        document.write(student.fee);
+        const {name,class:studentClass,fee:studentFee} = student;
+        document.write(studentClass);
+        document.write(studentFee);
+    </script>
+</body>
+</html>
