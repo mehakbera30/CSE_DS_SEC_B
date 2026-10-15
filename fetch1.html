@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheather app</title>
+</head>
+<style>
+    #card{
+        height: 400px;
+        width: 400px;
+        margin: auto;
+        border: 2px solid black;    
+        text-align: center;
+        background-color: pink;
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        
+    }
+</style>
+<body>
+    <div id="card">
+    <h1>the weather app</h1>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.hDF2yAJikOUJDilMceFgAwHaE8?r=0&w=5184&h=3456&rs=1&pid=ImgDetMain&o=7&rm=3" alt="wheather">
+    <h2>temperatue</h2>
+    <h2>weather</h2>
+    </div>
+
+    <script>
+     const ele = document.getElementById("card");
+     const URL = "https://api.weatherapi.com/v1/current.json?key=c72a6e77e4e147668a045026261009&q=Delhi";
+     async function loadData(){
+        try{
+           const res = await fetch(URL);
+           const data = await res.json();
+           console.log("data",data);
+              ele.innerHTML = `
+                <h1>the weather app</h1>
+                    <img src = "https:${data.current.condition.icon}" width="200" height="200">
+                    <h2>temperature : ${data.current.temp_c}°C</h2>
+                    <h2>weather : ${data.current.condition.text}</h2>
+                `; 
+                
+        }
+     }
+
+    </script>
+
+</body>
+</html>
